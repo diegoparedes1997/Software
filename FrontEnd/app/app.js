@@ -9,15 +9,16 @@ vHackersModule.config(function () {
 //
 // });
 vHackersModule.controller('HackersCtrl', ['$scope', '$http', function($scope, $http){
-  $scope.mensaje = "Hola Mundo";
-  $scope.amigos = [];
-  $scope.menasjeNUevo = "Go V-Hackers";
-  $scope.probar = function () {
+  var ctrl = this;
+  ctrl.mensaje = "Hola Mundo";
+  ctrl.amigos = [];
+  ctrl.mensajeNuevo = "Go V-Hackers";
+  ctrl.probar = function () {
     $http({
         method: 'GET',
         url: 'data/Hackers.json'
      }).then(function (response) {
-      $scope.amigos = response.data;
+      ctrl.amigos = response.data;
     }, function (error) {
 
     });

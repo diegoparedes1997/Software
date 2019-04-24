@@ -7,11 +7,11 @@
     <script src="app\app.js"></script>
   </head>
   <body>
-    <div ng-controller="HackersCtrl">
-      <p>{{mensaje}}</p>
-      <button ng-click = "probar()">Probar</button>
+    <div ng-controller="HackersCtrl as ctrl">
+      <p>{{ctrl.mensaje}}</p>
+      <button ng-click = "ctrl.probar()">Probar</button>
       <ul>
-        <li ng-repeat="amigo in amigos">
+        <li ng-repeat="amigo in ctrl.amigos">
           Nombre: {{amigo.nombre}}, carrera: {{amigo.carrera}}
         </li>
       </ul>
