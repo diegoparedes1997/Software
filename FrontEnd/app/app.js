@@ -11,7 +11,7 @@ vHackersModule.config(function () {
 vHackersModule.controller('HackersCtrl', ['$scope', '$http', function($scope, $http){
   $scope.mensaje = "Hola Mundo";
   $scope.amigos = [];
-  $scope.menasjeNUevo = "Go V-Hackers";
+  $scope.mensajeNUevo = "Go V-Hackers";
   $scope.probar = function () {
     $http({
         method: 'GET',
