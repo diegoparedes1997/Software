@@ -13,6 +13,7 @@ vHackersModule.controller('HackersCtrl', ['$scope', '$http', function($scope, $h
   ctrl.mensaje = "Hola Mundo";
   ctrl.amigos = [];
   ctrl.mensajeNuevo = "Go V-Hackers";
+  ctrl.Team=['Anderson', 'Carlos' , 'Diego' , 'Gustavo'];
   ctrl.probar = function () {
     $http({
         method: 'GET',
@@ -22,5 +23,7 @@ vHackersModule.controller('HackersCtrl', ['$scope', '$http', function($scope, $h
     }, function (error) {
 
     });
+
+
   };
 }]);

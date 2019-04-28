@@ -20,7 +20,16 @@
       <input type="text" ng-model="TeamName" placeholder="Ingrese el nombre del grupo"/>
       <p>Tu grupo es {{TeamName}}</p>
 
-      <p ng-repeat="name in Team">{{name}}</p>
+      <p>Grupo llamado desde index</p>
+      <ul
+      <il ng-repeat="name in Team">{{name}}</il>
+      </ul>
+
+
+      <p>Grupo llamado desde controlador</p>
+      <ul
+      <il ng-repeat="nameTest in ctrl.Team">{{nameTest}}</il>
+      </ul>
     </div>
   </body>
 </html>
