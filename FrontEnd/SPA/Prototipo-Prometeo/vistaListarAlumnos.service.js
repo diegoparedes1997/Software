@@ -6,10 +6,11 @@ function($q, $http) {
 
   servicio.listarAlumnos = function(){
 
+    var urlListarAlumnos = 'data/Hackers.json';
     var $defer = $q.defer();
     $http({
         method: 'GET',
-        url: 'data/Hackers.json'
+        url: urlListarAlumnos
      }).then(function (respuesta) {
        $defer.resolve(respuesta.data);
      }).catch(function (error) {

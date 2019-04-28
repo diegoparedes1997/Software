@@ -12,6 +12,7 @@ function($scope, hackersService, $uibModal){
   };
 
   ctrl.probarModal = function () {
+    //En este caso el controlador del modal se debe declarar en el JSON que pasa como parametro de open
     var modalInstance = $uibModal.open({
       animation: false,
       templateUrl: 'SPA/Prototipo-Prometeo/modalListarAlumnos.html',
@@ -20,10 +21,15 @@ function($scope, hackersService, $uibModal){
       backdrop: true,
       keyboard: true,
       resolve: {
-        content: function (){
+        parametrosModalListarAlumnos: function (){
           return "V Hackers"
         }
       }
+    });
+
+    //Recibo parametro de retorno
+    modalInstance.result.then( function (parametroRetorno) {
+      ctrl.alumnosLista.push(parametroRetorno);
     });
   };
 
