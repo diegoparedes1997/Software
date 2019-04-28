@@ -1,0 +1,27 @@
+<div class="content">
+  <div ng-controller="hackersCtrl as ctrl">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-12">
+            <p>{{ctrl.mensaje}}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <button ng-click = "ctrl.probar()"><i class="fa fa-edit"></i> Probar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <ul>
+          <li ng-repeat="alumno in ctrl.alumnosLista">
+            Nombre: {{alumno.nombre}}, carrera: {{alumno.carrera}}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

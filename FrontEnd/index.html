@@ -3,33 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="estilos/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <link href="estilos/content/css/styles.css" rel="stylesheet" type="text/css"/>
     <script src="app\lib\angular.min.js" charset="utf-8"></script>
+    <script src="app\lib\angular-route.min.js" charset="utf-8"></script>
     <script src="app\app.js"></script>
+    <script src="SPA\Prototipo-Prometeo\vistaListarAlumnos.ctrl.js"></script>
+    <script src="SPA\Prototipo-Prometeo\vistaTabla.ctrl.js"></script>
+    <script src="SPA\Prototipo-Prometeo\vistaListarAlumnos.service.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ng-table/1.0.0/ng-table.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ng-table/1.0.0/ng-table.min.css">
   </head>
-  <body ng-init="Team=['Anderson', 'Carlos' , 'Diego' , 'Gustavo']">
-    <div ng-controller="HackersCtrl as ctrl">
-      <p>{{ctrl.mensaje}}</p>
-      <p>{{ctrl.mensajeNuevo}}</p>
-      <button ng-click = "ctrl.probar()">Probar</button>
-      <ul>
-        <li ng-repeat="amigo in ctrl.amigos">
-          Nombre: {{amigo.nombre}}, carrera: {{amigo.carrera}}
-        </li>
-      </ul>
-
-      <input type="text" ng-model="TeamName" placeholder="Ingrese el nombre del grupo"/>
-      <p>Tu grupo es {{TeamName}}</p>
-
-      <p>Grupo llamado desde index</p>
-      <ul
-      <il ng-repeat="name in Team">{{name}}</il>
-      </ul>
-
-
-      <p>Grupo llamado desde controlador</p>
-      <ul
-      <il ng-repeat="nameTest in ctrl.Team">{{nameTest}}</il>
-      </ul>
-    </div>
+  <body>
+    <header ng-include="'header.html'"></header>
+    <main ng-view></main>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="estilos/bootstrap-4.3.1-dist/css/bootstrap.min.css"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   </body>
 </html>
