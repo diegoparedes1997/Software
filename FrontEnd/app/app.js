@@ -1,4 +1,4 @@
-var vHackersModule = angular.module('vHackersModule', ['ngRoute', 'ui.bootstrap']);
+var vHackersModule = angular.module('vHackersModule', ['ngRoute', 'ui.bootstrap', 'ngTable']);
 
 //Se ejecuta antes de que corra la aplicacion
 vHackersModule.config(['$routeProvider', function ($routeProvider) {
@@ -8,6 +8,9 @@ vHackersModule.config(['$routeProvider', function ($routeProvider) {
     })
     .when('/listaAlumnos', {
       templateUrl: 'SPA/Prototipo-Prometeo/vistaListarAlumnos.html'
+    })
+    .when('/tabla' , {
+      templateUrl: 'SPA/Prototipo-Prometeo/vistaTabla.html'
     })
     .otherwise({
       redirectTo: '/inicio'
