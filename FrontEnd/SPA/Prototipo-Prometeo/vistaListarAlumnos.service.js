@@ -6,7 +6,7 @@ function($q, $http) {
 
   servicio.listarAlumnos = function(){
 
-    var urlListarAlumnos = 'data/Hackers.json';
+    var urlListarAlumnos = 'http://200.16.7.187:7000/users';
     var $defer = $q.defer();
     $http({
         method: 'GET',
