@@ -6,15 +6,21 @@
     <script src="app\lib\angular.min.js" charset="utf-8"></script>
     <script src="app\app.js"></script>
   </head>
-  <body>
+  <body ng-init="Team=['Anderson', 'Carlos' , 'Diego' , 'Gustavo']">
     <div ng-controller="HackersCtrl as ctrl">
       <p>{{ctrl.mensaje}}</p>
+      <p>{{ctrl.mensajeNuevo}}</p>
       <button ng-click = "ctrl.probar()">Probar</button>
       <ul>
         <li ng-repeat="amigo in ctrl.amigos">
           Nombre: {{amigo.nombre}}, carrera: {{amigo.carrera}}
         </li>
       </ul>
+
+      <input type="text" ng-model="TeamName" placeholder="Ingrese el nombre del grupo"/>
+      <p>Tu grupo es {{TeamName}}</p>
+
+      <p ng-repeat="name in Team">{{name}}</p>
     </div>
   </body>
 </html>
