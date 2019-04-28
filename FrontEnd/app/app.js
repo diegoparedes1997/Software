@@ -1,4 +1,4 @@
-var vHackersModule = angular.module('vHackersModule', ['ngRoute','ngTable']);
+var vHackersModule = angular.module('vHackersModule', ['ngRoute', 'ui.bootstrap', 'ngTable']);
 
 //Se ejecuta antes de que corra la aplicacion
 vHackersModule.config(['$routeProvider', function ($routeProvider) {
