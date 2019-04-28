@@ -10,8 +10,8 @@ function($scope, hackersService, $uibModal){
       ctrl.alumnosLista = alumnosListaData;
     });
   };
-  ctrl.probarModal = function () {
 
+  ctrl.probarModal = function () {
     var modalInstance = $uibModal.open({
       animation: false,
       templateUrl: 'SPA/Prototipo-Prometeo/modalListarAlumnos.html',
@@ -25,6 +25,9 @@ function($scope, hackersService, $uibModal){
         }
       }
     });
-  }
-  }
-]);
+  };
+
+  ctrl.probarSwal = function () {
+    swal("¡Felicidades!", "Has ejecutado un swal", "success");
+  };
+}]);
