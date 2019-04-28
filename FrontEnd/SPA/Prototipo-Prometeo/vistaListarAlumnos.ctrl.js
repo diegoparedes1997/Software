@@ -2,10 +2,12 @@ angular.module('vHackersModule').controller('hackersCtrl', ['$scope', 'hackersSe
 function($scope, hackersService){
   var ctrl = this;
   ctrl.mensaje = "Hola Mundo";
-  ctrl.amigos = [];
+  ctrl.alumnosLista = [];
   ctrl.mensajeNuevo = "Go V-Hackers";
   ctrl.probar = function () {
-    ctrl.amigos = hackersService.listarAlumnos();
+    hackersService.listarAlumnos().then(function (alumnosListaData) {
+      ctrl.alumnosLista = alumnosListaData;
+    });
     // $http({
     //     method: 'GET',
     //     url: 'data/Hackers.json'

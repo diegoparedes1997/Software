@@ -10,11 +10,11 @@ function($q, $http) {
     $http({
         method: 'GET',
         url: 'data/Hackers.json'
-     }).then(function (response) {
-       $q.resolve(response.data);
-    }, function (error) {
-      $q.reject(error);
-    });
+     }).then(function (respuesta) {
+       $defer.resolve(respuesta.data);
+     }).catch(function (error) {
+       $defer.reject(error);
+     });
     return $defer.promise;
   }
 
