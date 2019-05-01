@@ -1,0 +1,35 @@
+<div class="content">
+  <div ng-controller="profesorCursoCtrl as ctrl">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-12">
+            <p>{{ctrl.mensaje}}</p>
+          </div>
+        </div>
+        <div class="<col-md-12 m-t-50>">
+          <div class="row">
+            <div class="col-md-5 ">
+              <button ng-click = "#!/inicio"><i class="fa fa-plus"></i> Crear Proyecto</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-5 m-t-30">
+              <button ng-click = "ctrl.swalEntregable()"><i class="fa fa-plus"></i> Crear Entregable</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <ul>
+          <li ng-repeat="alumno in ctrl.alumnosLista">
+            Nombre: {{alumno.nombre}}, carrera: {{alumno.carrera}}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
