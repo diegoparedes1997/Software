@@ -2,6 +2,7 @@ body{
   font-family: Arial;
   margin: 0;
 }
+<<<<<<< HEAD
 
 h1,h2,h3{
   margin: 0;
@@ -45,8 +46,7 @@ h1,h2,h3{
 }
 
 main{
-  background: #eee;
-  width: 80%;
+  width: 100% !important;
   margin: 30px auto;
   border-radius: 10px;
 }
@@ -93,27 +93,33 @@ main{
 }
 
 .content input{
-  width: 90%;
-  padding: 10px 5%;
-  border-radius: 10px;
-  border: 2px solid #ddd;
-  margin: 10px 0;
+  max-width: 100%;
+  /*padding: 10px 5%;*/
+  /*border-radius: 10px;*/
+  /*border: 2px solid #ddd;*/
+  /*margin: 10px 0;*/
 }
 
 .content input[type="submit"]:last-child{
   width: 150px;
   display: block;
   margin: 15px auto;
+=======
+.color-fondo-azul-pucp{
+  background: #2b78e4 !important;
+>>>>>>> 53ed355402a77838e5d1f956f9332a846072e149
+}
+.color-blanco{
+  color: #fff !important;
 }
 
-.remove{
+.textarea-feedback{
+  width: 100%;
+  height: 100%;
+  margin-top: 10px !important;
+}
+
+.input-grade{
+  width: 50%;
   float: right;
-  padding: 5px;
-  background: #fff;
-  width: 18px;
-  text-align: center;
-  border-radius: 20px;
-  color: crimson;
-  cursor: pointer;
-  margin-left: 10px;
 }
