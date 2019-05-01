@@ -2,6 +2,7 @@ body{
   font-family: Arial;
   margin: 0;
 }
+<<<<<<< HEAD
 
 h1,h2,h3{
   margin: 0;
@@ -103,18 +104,13 @@ main{
   width: 150px;
   display: block;
   margin: 15px auto;
+=======
+.color-fondo-azul-pucp{
+  background: #2b78e4 !important;
+>>>>>>> 53ed355402a77838e5d1f956f9332a846072e149
 }
-
-.remove{
-  float: right;
-  padding: 5px;
-  background: #fff;
-  width: 18px;
-  text-align: center;
-  border-radius: 20px;
-  color: crimson;
-  cursor: pointer;
-  margin-left: 10px;
+.color-blanco{
+  color: #fff !important;
 }
 
 .textarea-feedback{
