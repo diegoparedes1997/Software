@@ -1,18 +1,18 @@
 //-- Anderson
-angular.module('vHackersModule').controller('entregableCtrl', ['$scope', 'gestiónProyectoService', '$uibModal',
+angular.module('vHackersModule').controller('entregableMCtrl', ['$scope', 'gestiónProyectoService', '$uibModal',
 function($scope, gestiónProyectoService, $uibModal){
   var ctrl = this;
   var entregable=this;
-  ctrl.titulo = "Nuevo Entregable";
+  ctrl.titulo = "Modificar Entregable";
   ctrl.alumnosLista = [];
   ctrl.alumnosListaModal = [];
   $scope.columnas=[1,2,3,4,5,6,7];
   $scope.filas=[1,2,3,4];
   ctrl.dias=['D','L','M','Mi','J','V','S'];
   // var d=new Date("5/11/2020");
-  // $scope.entregable={nombEntrg: 'Entregable 1', fechaI:new Date("2/05/2019"), horaI:new Date("2/05/2019 20:08"),
-  //                     descrEntrg: 'Entregable 1', fechaF:new Date("2/05/2019"),horaF:new Date("2/05/2019 20:08"),
-  //                   puntaje: 200};
+  $scope.entregable={nombEntrg: 'Entregable 1', fechaI:new Date("2/05/2019"), horaI:new Date("2/05/2019 20:08"),
+                      descrEntrg: 'Entregable 1', fechaF:new Date("2/05/2019"),horaF:new Date("2/05/2019 20:08"),
+                    puntaje: 200};
 
 
 

@@ -15,6 +15,12 @@ vHackersModule.config(['$routeProvider', function ($routeProvider) {
     .when('/entregable' , {
       templateUrl: 'SPA/Prototipo-Prometeo/Profesor/vistaCrearEntregable.html'
     })
+    .when('/entregableM' , {
+      templateUrl: 'SPA/Prototipo-Prometeo/Profesor/vistaModificarEntregable.html'
+    })
+    .when('/proyectos' , {
+      templateUrl: 'SPA/Prototipo-Prometeo/Profesor/vistaGestiónProyecto.html'
+    })
     .otherwise({
       redirectTo: '/inicio'
     })

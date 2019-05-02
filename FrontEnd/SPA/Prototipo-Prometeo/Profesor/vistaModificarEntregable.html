@@ -1,6 +1,6 @@
 <!-- Anderson -->
 <section id="main">
-  <div ng-controller="entregableCtrl as ctrl">
+  <div ng-controller="entregableMCtrl as ctrl">
     <div class="container">
       <div class="block-container">
         <h2></h2>
@@ -87,21 +87,22 @@
                         <label class="control-label">Notificaciones</label>
                       </div>
                       <div class="form-group">
-                        <table class="table table-hover">
-                          <thead>
-                            <tr>
-                              <th ng-repeat="dia in ctrl.dias">{{dia}}</th>
-                            </tr>
+                        <div class="table table-hover">
+                          <table class="table table-hover">
+                            <thead>
+                              <tr>
+                                <th ng-repeat="dia in ctrl.dias">{{dia}}</th>
+                              </tr>
 
-                          </thead>
-                          <tbody>
-                            <tr ng-repeat="fila in filas">
-                              <td ng-repeat="columna in columnas"><i class="far fa-calendar fa-2x" aria-hidden="true" ></i></td>
-                            </tr>
-                          </tbody>
-                        </table>
+                            </thead>
+                            <tbody>
+                              <tr ng-repeat="fila in filas">
+                                <td ng-repeat="columna in columnas"><i class="far fa-calendar fa-2x" aria-hidden="true" ></i></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
                       </div>
-
                   </div>
               </form>
 
