@@ -4,13 +4,13 @@ function($q, $http) {
 
   var servicio = this;
 
-  servicio.listarAlumnos = function(){
+  servicio.listarProyectos = function(){
 
-    var urlListarAlumnos = '';
+    var urlListarProyectos = './data/proyectos.json';
     var $defer = $q.defer();
     $http({
         method: 'GET',
-        url: urlListarAlumnos
+        url: urlListarProyectos
      }).then(function (respuesta) {
        $defer.resolve(respuesta.data);
      }).catch(function (error) {
