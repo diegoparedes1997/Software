@@ -21,6 +21,9 @@ vHackersModule.config(['$routeProvider', function ($routeProvider) {
     .when('/Profesor/GestionProyecto' , {
       templateUrl: 'SPA/Prototipo-Prometeo/Profesor/vistaGestiónProyecto.html'
     })
+    .when('/entregable' , {
+        templateUrl: 'SPA/Prototipo-Prometeo/Profesor/vistaCrearEntregable.html'
+    })
     .otherwise({
       redirectTo: '/inicio'
     })

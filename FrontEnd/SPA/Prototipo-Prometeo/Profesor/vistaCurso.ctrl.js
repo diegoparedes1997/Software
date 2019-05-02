@@ -1,7 +1,8 @@
 angular.module('vHackersModule').controller('profesorCursoCtrl', ['$scope', 'profesorCursoService', '$uibModal',
+
 function($scope, hackersService, $uibModal){
   var ctrl = this;
-  ctrl.mensaje = "Ingeniería de Software";
+  ctrl.nombreCurso = "Ingeniería de Software";
   ctrl.alumnosLista = [];
   ctrl.alumnosListaModal = [];
   ctrl.mensajeNuevo = "Go V-Hackers";
