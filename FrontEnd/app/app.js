@@ -12,6 +12,15 @@ vHackersModule.config(['$routeProvider', function ($routeProvider) {
     .when('/tabla' , {
       templateUrl: 'SPA/Prototipo-Prometeo/vistaTabla.html'
     })
+    .when('/Profesor' , {
+      templateUrl: 'SPA/Prototipo-Prometeo/Profesor/vistaInicio.html'
+    })
+    .when('/Profesor/Curso' , {
+      templateUrl: 'SPA/Prototipo-Prometeo/Profesor/vistaCurso.html'
+    })
+    .when('/Profesor/GestionProyecto' , {
+      templateUrl: 'SPA/Prototipo-Prometeo/Profesor/vistaGestiónProyecto.html'
+    })
     .otherwise({
       redirectTo: '/inicio'
     })
