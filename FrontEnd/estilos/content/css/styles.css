@@ -10,16 +10,17 @@ body{
   color: #fff !important;
 }
 
-.textarea-feedback{
+.texto-retroalimentacion{
   width: 100%;
   height: 100%;
   margin-top: 10px !important;
 }
 
-.input-grade{
+.texto-nota{
   width: 50%;
   float: right;
 }
+
 
 .swal-footer {
   text-align: center;
@@ -27,4 +28,8 @@ body{
 
 .btn:hover{
   background: rgb(127, 209, 214) !important;
+}
+.texto-centrado{
+  text-align:center !important;
+
 }
