@@ -1,9 +1,7 @@
 [{
-  "nombEntrg": "Entregable Software",
-  "fechaI": "02/05/2019",
-  "horaI": "05:02",
-  "fechaF": "02/05/2019",
-  "horaF": "05:02",
-  "descrEntrg": "Entrega 1",
-  "puntaje": "200"
+  "id": "bbf11f6c-2fb8-41ac-9171-cd2f8e744351",
+  "nombre": "Entregable Software",
+  "fechaEntrega": 15565140000000,
+  "tieneAlarma": 1,
+  "ponderacion": 1.2
   }]

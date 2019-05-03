@@ -1,15 +1,15 @@
 <!-- Anderson -->
 <section id="main">
-  <div ng-controller="entregableMCtrl as ctrl">
+  <div ng-controller="entregableCtrl as ctrl">
     <div class="container">
       <div class="block-container">
         <h2></h2>
       </div>
-      <div class="card">
+      <div class="card" ng-init="init()">
         <div class="card-header">
           <div class="row">
             <div class="col-md-12">
-              <h2>{{ctrl.titulo}}</h2>
+              <h2>{{ctrl.tituloModificado}}</h2>
             </div>
           </div>
         </div>
@@ -22,7 +22,7 @@
                         <label class="col-sm-4 control-label">Nombre:</label>
                         <div class="col-sm-8">
                           <div class="fg-line">
-                              <input type="text" class="form-control input-sm" ng-model="entregable.nombEntrg" placeholder="e.g: Carlos Carrillo">
+                              <input type="text" class="form-control input-sm" ng-model="ctrl.entregableM.nombre" placeholder="e.g: Entregable de Ingeniería de Software">
                           </div>
                         </div>
                       </div>
@@ -30,12 +30,12 @@
                         <label class="col-sm-4 control-label">Fecha y Hora Inicio:</label>
                         <div class="col-sm-4">
                           <div class="fg-line">
-                              <input type="date" class="form-control input-sm" ng-model="entregable.fechaI" placeholder="e.g: 11/04/2019">
+                              <input type="date" class="form-control input-sm" ng-model="ctrl.entregableM.fechaEntrega" placeholder="e.g: 11/04/2019">
                           </div>
                         </div>
                         <div class="col-sm-4">
                           <div class="fg-line">
-                              <input type="time" class="form-control input-sm" ng-model="entregable.horaI" placeholder="e.g: 11/04/2019">
+                              <input type="time" class="form-control input-sm" ng-model="ctrl.entregableM.horaEntrega" placeholder="e.g: 11/04/2019">
                           </div>
                         </div>
                       </div>
@@ -43,12 +43,12 @@
                         <label class="col-sm-4 control-label">Fecha y Hora Fin:</label>
                         <div class="col-sm-4">
                           <div class="fg-line">
-                              <input type="date" class="form-control input-sm" ng-model="entregable.fechaF" placeholder="e.g: 11/04/2019">
+                              <input type="date" class="form-control input-sm" ng-model="ctrl.entregableM.fechaFin"  placeholder="e.g: 11/04/2019">
                           </div>
                         </div>
                         <div class="col-sm-4">
                           <div class="fg-line">
-                              <input type="time" class="form-control input-sm" ng-model="entregable.horaF" placeholder="e.g: 11/04/2019">
+                              <input type="time" class="form-control input-sm" ng-model="ctrl.entregableM.horaFin"  placeholder="e.g: 11/04/2019">
                           </div>
                         </div>
                       </div>
@@ -56,7 +56,7 @@
                         <label class="col-sm-4 control-label">Descripción:</label>
                         <div class="col-sm-8">
                           <div class="fg-line">
-                              <textarea class="form-control" rows="5" ng-model=entregable.descrEntrg placeholder="......."></textarea>
+                              <textarea class="form-control" rows="5" ng-model="ctrl.entregableM.descripcion"  placeholder="......."></textarea>
                           </div>
                         </div>
                       </div>
@@ -64,7 +64,7 @@
                         <label class="col-sm-4 control-label">Puntaje Máximo:</label>
                         <div class="col-sm-8">
                           <div class="fg-line">
-                              <input type="number" ng-model="entregable.puntaje" class="form-control input-sm">
+                              <input type="number" ng-model="ctrl.entregableM.ponderacion" class="form-control input-sm">
                           </div>
                         </div>
                       </div>
@@ -96,8 +96,8 @@
 
                             </thead>
                             <tbody>
-                              <tr ng-repeat="fila in filas">
-                                <td ng-repeat="columna in columnas"><i class="far fa-calendar fa-2x" aria-hidden="true" ></i></td>
+                              <tr ng-repeat="fila in ctrl.filas">
+                                <td ng-repeat="columna in ctrl.columnas"><i class="far fa-calendar fa-2x" aria-hidden="true" ></i></td>
                               </tr>
                             </tbody>
                           </table>
@@ -110,9 +110,9 @@
           </div>
           <div class="row">
             <div class="col-md-12" align="right">
-              <button type="submit" ng-click = "ctrl.swalEntregable(entregable)" class="btn btn-primary waves-effect"><i class="fa fa-save"></i> Guardar</button>
+              <button type="button" ng-click = "ctrl.swalEntregableM(ctrl.entregableM)" class="btn btn-primary waves-effect"><i class="fa fa-save"></i> Guardar</button>
               <button type="button" class="btn btn-default waves-effect"><i class="fa fa-arrow-circle-left"></i> Atrás</button>
-              <!-- <button ng-click = "ctrl.probarSwal()"><i class="fa fa-file"></i> Probar Swal</button> -->
+              <!--<button type="button" class="btn btn-primary waves-effect" ng-click = "ctrl.probar()"><i class="fa fa-file"></i> Probar Swal</button>-->
             </div>
 
           <!-- <div class="row">
