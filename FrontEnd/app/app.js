@@ -14,6 +14,7 @@ vHackersModule.config(['$routeProvider', function ($routeProvider) {
     })
     .when('/calificacion', {
       templateUrl: 'SPA/Prototipo-Prometeo/Profesor/Evaluacion-Retroalimentacion/calificacionEntregable.html'
+<<<<<<< HEAD
     })
       .when('/Profesor' , {
         templateUrl: 'SPA/Prototipo-Prometeo/Profesor/vistaInicio.html'
@@ -26,6 +27,20 @@ vHackersModule.config(['$routeProvider', function ($routeProvider) {
       })
       .when('/entregable' , {
           templateUrl: 'SPA/Prototipo-Prometeo/Profesor/vistaCrearEntregable.html'
+=======
+    })
+    .when('/Profesor' , {
+      templateUrl: 'SPA/Prototipo-Prometeo/Profesor/vistaInicio.html'
+    })
+    .when('/Profesor/Curso' , {
+      templateUrl: 'SPA/Prototipo-Prometeo/Profesor/vistaCurso.html'
+    })
+    .when('/Profesor/GestionProyecto' , {
+      templateUrl: 'SPA/Prototipo-Prometeo/Profesor/vistaGestiónProyecto.html'
+    })
+    .when('/entregable' , {
+        templateUrl: 'SPA/Prototipo-Prometeo/Profesor/vistaCrearEntregable.html'
+>>>>>>> 5f1a306881878c04140d6952b10f77e435321dce
     })
     .otherwise({
       redirectTo: '/inicio'
