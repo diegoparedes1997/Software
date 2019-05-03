@@ -27,24 +27,24 @@ vHackersModule.config(['$routeProvider', function ($routeProvider) {
       .when('/Profesor/GestionProyecto' , {
         templateUrl: 'SPA/Prototipo-Prometeo/Profesor/vistaGestiónProyecto.html'
       })
+      .when('/Profesor' , {
+        templateUrl: 'SPA/Prototipo-Prometeo/Profesor/vistaInicio.html'
+      })
+      .when('/Profesor/Curso' , {
+        templateUrl: 'SPA/Prototipo-Prometeo/Profesor/vistaCurso.html'
+      })
+      .when('/Profesor/GestionProyecto' , {
+        templateUrl: 'SPA/Prototipo-Prometeo/Profesor/vistaGestiónProyecto.html'
+      })
       .when('/entregable' , {
-          templateUrl: 'SPA/Prototipo-Prometeo/Profesor/vistaCrearEntregable.html'
-    })
-    .when('/Profesor' , {
-      templateUrl: 'SPA/Prototipo-Prometeo/Profesor/vistaInicio.html'
-    })
-    .when('/Profesor/Curso' , {
-      templateUrl: 'SPA/Prototipo-Prometeo/Profesor/vistaCurso.html'
-    })
-    .when('/Profesor/GestionProyecto' , {
-      templateUrl: 'SPA/Prototipo-Prometeo/Profesor/vistaGestiónProyecto.html'
-    })
-    .when('/entregable' , {
         templateUrl: 'SPA/Prototipo-Prometeo/Profesor/vistaCrearEntregable.html'
-    })
-    .otherwise({
-      redirectTo: '/inicio'
-    })
+      })
+      .when('/entregableM' , {
+        templateUrl: 'SPA/Prototipo-Prometeo/Profesor/vistaModificarEntregable.html'
+      })
+      .otherwise({
+        redirectTo: '/inicio'
+      })
 }]);
 //Se ejecuta mientras corre la aplicacion
 // vHackersModule.run(function () {
