@@ -95,10 +95,10 @@
               <div class="col-sm-8">
                 <div class="fg-line">
                   <select chosen multiple
-                    options="ctrl.tipos"
+                    options="ctrl.tiposUsuario"
                     data-placeholder="Seleccione los tipos de usuario"
                     ng-model="ctrl.tipo"
-                    ng-options="tipo as tipo.nombre for tipo in ctrl.tipos">
+                    ng-options="tipo as tipo.descripcion for tipo in ctrl.tiposUsuario">
                   </select>
                 </div>
               </div>
