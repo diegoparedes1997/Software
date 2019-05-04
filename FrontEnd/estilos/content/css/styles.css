@@ -3,7 +3,10 @@ body{
   margin: 0;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5cc0e24aaa2b9f4f2168011b0603cf3029525668
 .color-fondo-azul-pucp{
   background: #2b78e4 !important;
 }
@@ -22,6 +25,15 @@ body{
   float: right;
 }
 
+
+.swal-footer {
+  text-align: center;
+}
+
+.btn:hover{
+  background: rgb(127, 209, 214) !important;
+}
 .texto-centrado{
   text-align:center !important;
+
 }
