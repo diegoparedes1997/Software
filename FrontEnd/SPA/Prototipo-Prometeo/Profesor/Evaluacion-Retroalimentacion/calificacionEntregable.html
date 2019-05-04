@@ -34,19 +34,19 @@
             <tr ng-repeat="criterio in ctrl.herramientaEvaluacion">
               <td data-title="'Criterios'" ng-model="criterio.nombre">{{criterio.nombre}}</td>
               <td data-title="'Muy bueno'" class="texto-centrado"><label>
-                <input type="radio" name="{{criterio.id}}" ng-checked="criterio.calificacion[0]" ng-model="value" value={{criterio.puntaje[0]}} ng-change="ctrl.sumarPuntaje(value)"></input>
+                <input type="radio" name="{{criterio.id}}" ng-checked="criterio.calificacion[0]" ng-model="value" value={{criterio.puntaje[0]}} ng-change="ctrl.sumarPuntaje(value,criterio.id)"></input>
               </td>
               <td data-title="'Bueno'" class="texto-centrado">
-                <input type="radio" name="{{criterio.id}}" ng-checked="criterio.calificacion[1]" ng-model="value" value={{criterio.puntaje[1]}} ng-change="ctrl.sumarPuntaje(value)"></input>
+                <input type="radio" name="{{criterio.id}}" ng-checked="criterio.calificacion[1]" ng-model="value" value={{criterio.puntaje[1]}} ng-change="ctrl.sumarPuntaje(value,criterio.id)"></input>
               </td>
               <td data-title="'Regular'" class="texto-centrado">
-                <input type="radio"  name="{{criterio.id}}" ng-checked="criterio.calificacion[2]" ng-model="value" value={{criterio.puntaje[2]}} ng-change="ctrl.sumarPuntaje(value)"></input>
+                <input type="radio"  name="{{criterio.id}}" ng-checked="criterio.calificacion[2]" ng-model="value" value={{criterio.puntaje[2]}} ng-change="ctrl.sumarPuntaje(value,criterio.id)"></input>
               </td>
               <td data-title="'Bajo'" class="texto-centrado">
-                <input type="radio" name="{{criterio.id}}" ng-checked="criterio.calificacion[3]" ng-model="value" value={{criterio.puntaje[3]}} ng-change="ctrl.sumarPuntaje(value)"></input>
+                <input type="radio" name="{{criterio.id}}" ng-checked="criterio.calificacion[3]" ng-model="value" value={{criterio.puntaje[3]}} ng-change="ctrl.sumarPuntaje(value,criterio.id)"></input>
               </td>
               <td data-title="'Muy bajo'" class="texto-centrado">
-                <input type="radio" name="{{criterio.id}}" ng-checked="criterio.calificacion[4]" ng-model="value" value={{criterio.puntaje[4]}} ng-change="ctrl.sumarPuntaje(value)"></input>
+                <input type="radio" name="{{criterio.id}}" ng-checked="criterio.calificacion[4]" ng-model="value" value={{criterio.puntaje[4]}} ng-change="ctrl.sumarPuntaje(value,criterio.id)"></input>
               </td>
               <td data-title="'Observación'">
                 <textarea ng-model="criterio.observacion"
