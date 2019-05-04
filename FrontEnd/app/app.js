@@ -1,44 +1,57 @@
-var vHackersModule = angular.module('vHackersModule', ['ui.router', 'ui.router.stateHelper', 'ui.bootstrap', 'ngTable', 'angular.chosen']);
+var vHackersModule = angular.module('vHackersModule', ['ui.bootstrap', 'ngTable','ui.router','ui.router.stateHelper']);
 
 //Se ejecuta antes de que corra la aplicacion
-vHackersModule.config([
-  '$urlRouterProvider',
-  'stateHelperProvider',
-  function($urlRouterProvider, stateHelperProvider) {
-    $urlRouterProvider.otherwise('raiz.inicio');
-    stateHelperProvider
-    .state({
-      name: 'raiz',
+vHackersModule.config(['$urlRouterProvider', 'stateHelperProvider',
+function ($urlRouterProvider,stateHelperProvider) {
+  stateHelperProvider
+  .state({
+      name: 'index',
       abstract: true,
-      url: '/raiz',
-      templateUrl: 'SPA/raiz.html',
-      children: [
+      url: '/index',
+      templateUrl: 'index.html',
+      children:[
         {
           name: 'inicio',
-          url : '/inicio',
+          url: '/inicio',
           templateUrl: 'SPA/Prototipo-Prometeo/vistaPrincipal.html'
         },
         {
           name: 'listaAlumnos',
-          url : '/listaAlumnos',
+          url: '/listaAlumnos',
           templateUrl: 'SPA/Prototipo-Prometeo/vistaListarAlumnos.html'
         },
         {
           name: 'tabla',
-          url : '/tabla',
+          url: '/tabla',
           templateUrl: 'SPA/Prototipo-Prometeo/vistaTabla.html'
         },
         {
-          name: 'listaAlumnos',
-          url : '/listaAlumnos',
-          templateUrl: 'SPA/Prototipo-Prometeo/vistaListarAlumnos.html'
+          name: 'calificacion',
+          url: '/calificacion',
+          templateUrl: 'SPA/Prototipo-Prometeo/Profesor/Evaluacion-Retroalimentacion/calificacionEntregable.html'
         },
         {
-          name: 'gestion-usuarios',
-          url : '/gestion-usuarios',
-          templateUrl: 'SPA/Prototipo-Prometeo/Administrador/Gestion-usuarios/gestionUsuarios.html'
-        }]
-      });
+          name: 'profesor',
+          url: '/profesor',
+          templateUrl: 'SPA/Prototipo-Prometeo/Profesor/vistaInicio.html'
+        },
+        {
+          name: 'curso',
+          url: '/curso',
+          templateUrl: 'SPA/Prototipo-Prometeo/Profesor/vistaCurso.html'
+        },
+        {
+          name:'gestion-proyecto',
+          url: '/gestion-proyecto',
+          templateUrl: 'SPA/Prototipo-Prometeo/Profesor/vistaGestiónProyecto.html'
+        },
+        {
+            name: 'evaluacion-herramienta',
+            url: '/evaluacion-herramienta',
+            templateUrl: 'SPA/Prototipo-Prometeo/Profesor/vistaCrearEntregable.html'
+        }
+      ]
+    });
 }]);
 
 // vHackersModule.config(['$routeProvider', function ($routeProvider) {
