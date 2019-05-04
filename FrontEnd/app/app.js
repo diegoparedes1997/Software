@@ -1,13 +1,14 @@
-var vHackersModule = angular.module('vHackersModule', ['ui.bootstrap', 'ngTable','ui.router','ui.router.stateHelper']);
+var vHackersModule = angular.module('vHackersModule', ['ui.bootstrap', 'ngTable','ui.router','ui.router.stateHelper', 'localytics.directives']);
 
 //Se ejecuta antes de que corra la aplicacion
 vHackersModule.config(['$urlRouterProvider', 'stateHelperProvider',
 function ($urlRouterProvider,stateHelperProvider) {
+  $urlRouterProvider.otherwise("inicio");
   stateHelperProvider
   .state({
-      name: 'index',
+      name: 'nuevo',
       abstract: true,
-      url: '/index',
+      url: '',
       templateUrl: 'index.html',
       children:[
         {
@@ -49,9 +50,14 @@ function ($urlRouterProvider,stateHelperProvider) {
             name: 'evaluacion-herramienta',
             url: '/evaluacion-herramienta',
             templateUrl: 'SPA/Prototipo-Prometeo/Profesor/vistaCrearEntregable.html'
+        },
+        {
+          name: 'gestion-usuarios',
+          url: '/gestion-usuarios',
+          templateUrl: 'SPA/Prototipo-Prometeo/Administrador/Gestion-usuarios/gestionUsuarios.html'
         }
       ]
-    });
+    }, { keepOriginalNames: true });
 }]);
 
 // vHackersModule.config(['$routeProvider', function ($routeProvider) {

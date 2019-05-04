@@ -34,3 +34,7 @@ body{
   text-align:center !important;
 
 }
+
+.chosen-container {
+  width: 100% !important;
+}

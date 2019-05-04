@@ -26,6 +26,18 @@ function modalAgregarUsuarioCtrl ($scope, $uibModalInstance){
       nombre: 'Ingenieria Industrial'
     }
   ];
+  ctrl.tiposUsuario = [
+    {
+      id: "",
+      descripcion: "Alumno",
+      fechaCreacion: ""
+    },
+    {
+      id: "",
+      descripcion: "Profesor",
+      fechaCreacion: ""
+    }
+  ]
 
   ctrl.guardarUsuario = function () {
     swal({
