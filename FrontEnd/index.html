@@ -14,6 +14,8 @@
     <link rel="image_src" href="app/lib/chosen/chosen-sprite.png">
     <script src="app\lib\angular.min.js" charset="utf-8"></script>
     <script src="app\lib\angular-route.min.js" charset="utf-8"></script>
+    <script src="node_modules\@uirouter\angularjs\release\angular-ui-router.min.js" charset="utf-8"></script>
+    <script src="node_modules\angular-ui-router.statehelper\statehelper.min.js" charset="utf-8"></script>
     <script src="app\lib\ui-bootstrap-tpls-2.5.0.min.js" charset="utf-8"></script>
     <script src="app\lib\chosen\adityasharat-angular-chosen-28d9112\angular-chosen.js" charset="utf-8"></script>
     <script src="app\lib\chosen\adityasharat-angular-chosen-28d9112\angular-chosen.min.js" charset="utf-8"></script>
@@ -39,8 +41,7 @@
     <script src="app\lib\sweetalert.min.js"></script>
   </head>
   <body>
-    <header id="header" ng-include="'header.html'" class="color-fondo-azul-pucp"></header>
-    <main ng-view></main>
+    <div ui-view></div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="estilos/bootstrap-4.3.1-dist/css/bootstrap.min.css"></script>
