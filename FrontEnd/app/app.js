@@ -3,17 +3,17 @@ var vHackersModule = angular.module('vHackersModule', ['ui.bootstrap', 'ngTable'
 //Se ejecuta antes de que corra la aplicacion
 vHackersModule.config(['$urlRouterProvider', 'stateHelperProvider',
 function ($urlRouterProvider,stateHelperProvider) {
-  $urlRouterProvider.otherwise("inicio");
+  $urlRouterProvider.otherwise("inicio/principal");
   stateHelperProvider
   .state({
-      name: 'nuevo',
+      name: 'inicio',
       abstract: true,
-      url: '',
+      url: '/inicio',
       templateUrl: 'index.html',
       children:[
         {
-          name: 'inicio',
-          url: '/inicio',
+          name: 'principal',
+          url: '/principal',
           templateUrl: 'SPA/Prototipo-Prometeo/vistaPrincipal.html'
         },
         {
